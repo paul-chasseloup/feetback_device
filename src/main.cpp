@@ -13,7 +13,6 @@ BluetoothSerial ESP_BT; //Object for Bluetooth
 #define LEDG 18
 #define LEDB 21
 #define LEDR 22
-
 // message pour transmission bluetooth 
 int message[3];
 
