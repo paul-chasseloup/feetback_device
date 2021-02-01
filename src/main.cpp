@@ -113,7 +113,7 @@ void loop()
             Serial.println(sensorVolt5);
 
             // Fréquence d'envoie des données
-            delay(1000);
+            delay(500);
 
             //Check if we receive anything from Bluetooth pour le stop
             if (ESP_BT.available()) 
