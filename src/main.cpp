@@ -87,11 +87,12 @@ void loop()
             sensorValue4 = analogRead(SENSOR4);
             sensorValue5 = analogRead(SENSOR5);
             // Calculer les tensions correspondantes
-            sensorVolt1 = sensorValue1 *(3.3/4093.0);
-            sensorVolt2 = sensorValue2 *(3.3/4093.0);
-            sensorVolt3 = sensorValue3 *(3.3/4093.0);
-            sensorVolt4 = sensorValue4 *(3.3/4093.0);
-            sensorVolt5 = sensorValue5 *(3.3/4093.0);
+            // edit : pas de conversion specifique. Possibilité d'appliquer des coefs
+            sensorVolt1 = sensorValue1 ;
+            sensorVolt2 = sensorValue2 ;
+            sensorVolt3 = sensorValue3 ;
+            sensorVolt4 = sensorValue4 ;
+            sensorVolt5 = sensorValue5 ;
             
             // Print on serial bluetooth
             ESP_BT.print("Sensor 1 :");
@@ -104,7 +105,7 @@ void loop()
             ESP_BT.println(sensorVolt4);
             ESP_BT.print("Sensor 5 :");
             ESP_BT.println(sensorVolt5);
-            ESP_BT.println(" ");
+           //ESP_BT.println(" ");
             // Print on serial arduino
             Serial.println(sensorVolt1);
             Serial.println(sensorVolt2);
@@ -113,7 +114,7 @@ void loop()
             Serial.println(sensorVolt5);
 
             // Fréquence d'envoie des données
-            delay(500);
+            delay(50);
 
             //Check if we receive anything from Bluetooth pour le stop
             if (ESP_BT.available()) 

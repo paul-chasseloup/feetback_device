@@ -85,11 +85,11 @@ void loop()
             sensorValue4 = analogRead(SENSOR4);
             sensorValue5 = analogRead(SENSOR5);
             // Calculer les tensions correspondantes
-            sensorVolt1 = sensorValue1 *(3.3/4093.0);
-            sensorVolt2 = sensorValue2 *(3.3/4093.0);
-            sensorVolt3 = sensorValue3 *(3.3/4093.0);
-            sensorVolt4 = sensorValue4 *(3.3/4093.0);
-            sensorVolt5 = sensorValue5 *(3.3/4093.0);
+            sensorVolt1 = sensorValue1 ;
+            sensorVolt2 = sensorValue2 ;
+            sensorVolt3 = sensorValue3 ;
+            sensorVolt4 = sensorValue4 ;
+            sensorVolt5 = sensorValue5 ;
             
             // Print on serial bluetooth
             ESP_BT.print("Sensor 1 :");
